@@ -1,2 +1,1 @@
-# zombie-cucumber for Zombie+
-
+# Testes-automtizados-Cucumber-com-Nightwatch.js
