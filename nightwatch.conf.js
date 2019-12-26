@@ -1,5 +1,7 @@
 const chromedriver = require('chromedriver');
 
+//codigo do teste automatizado
+//configuração padrão do nightwatch
 module.exports = {
     src_folders: ["steps"], //tests is a folder in workspace which has the step definitions
     page_objects_path: 'pages/', //page_objects folder where selectors are saved

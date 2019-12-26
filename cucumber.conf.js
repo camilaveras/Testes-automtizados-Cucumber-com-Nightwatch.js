@@ -30,7 +30,7 @@ BeforeAll(async () => {
 
 //redimensiona o tamanho da janela. Executa para cada cenario
 Before(function () {
-  client.resizeWindow(1920, 1080)
+  client.resizeWindow(1400, 800)
 });
 
 //Depois de tudo ele gera um realatorio

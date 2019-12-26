@@ -5,7 +5,7 @@ Funcionalidade: Login
     Cenário: Login
 
         Quando eu faço login com "06295485367" e "11955301301"
-        Então devo ver "Olá, bem vindo" no painel de área logada
+        Então devo ver "Olá, este é o seu Painel!" no painel de área logada
 
 
     Esquema do Cenário: Tentar logar
@@ -15,8 +15,7 @@ Funcionalidade: Login
 
 
         Exemplos:
-        | cpf | telefone    |  texto                      | tipo |
-        |     | ab123       | opps. cade o email          | info |
-        | 1212121| ab123    | opps. cade a senha          | info |
-        | 2121212| 1234456  | opps. cade o email          | danger |
-        | 23132332| ab123   | usuario ou senha invalida   | danger |
+        |      cpf       |    telefone     |              texto               | TIPO |
+        | 062.954.853-67 | (11) 95530-1301 | sucesso                          | info |
+        |     0629585367 |                 | Erro, insira o telefone          | info |
+        |        1212121 | ab123           | Erro, cpf ou telefones invalidos | info |

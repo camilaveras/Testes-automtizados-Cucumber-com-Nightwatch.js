@@ -2,10 +2,14 @@ var loginActions = {
     with: function (cpf, telefone){
         return this
         .navigate()
-        .waitForElementVisible('@form', 10000)
-        .setValue('@tel', cpf)
-        .setValue('@inputplaceholder="Digite seu celular"', telefone)
+        //aguardando que um elemento seja exibido
+        .waitForElementVisible('@form', 100000)
+        .setValue('input[placeholder="Qual é o seu CPF ou CNPJ?"]', '06295485367')
+        //se eu colocar assim> vai >         .setValue('input[placeholder="Digite seu celular"]', '11955301301')
+        .setValue('input[placeholder="Digite seu celular"]', '11955301301')
         .click('@loginButton')
+       
+        //click_button 'Entrar'
     },
     expectAlertDanger: function(texto){
         return this
@@ -23,10 +27,10 @@ module.exports = {
     url: '/signin',
     commands: [loginActions],
     elements: {
-        form: '.card-login',
-        passInput:'input[name=password',
-        loginButton: '.login-button',
+        form: '.loginContainer',
+       //passInput:'input[name=password',
+        loginButton: '.button',
         alertDanger: '.alert-danger',
-        alertInfo: '.alert-info'
+        alertInfo: '.panelContainer'
     }
 }

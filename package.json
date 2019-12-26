@@ -1,5 +1,5 @@
 {
-  "name": "zombie-cucumber",
+  "name": "Testes",
   "version": "1.0.0",
   "description": "Template pra usar Cucumberjs com Nightwatch",
   "main": "app.js",

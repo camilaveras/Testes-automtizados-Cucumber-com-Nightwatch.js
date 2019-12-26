@@ -1,15 +1,15 @@
 var userActions = {
     expectLoggedUser: function (name) {
         return this
-        .waitForElementVisible('@userInfo', 10000)
-        .assert.containsText('@userInfo', name)
+        .waitForElementVisible('@welcomeTitle', 30000)
+        .assert.containsText('@welcomeTitle', name)
 
     }
 }
 module.exports = {
     commands: [userActions],
     elements: {
-        userInfo: '.user .info span'
+        welcomeTitle: '.welcomeTitle'
 
     }
 }

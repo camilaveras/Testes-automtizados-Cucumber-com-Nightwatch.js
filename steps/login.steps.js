@@ -10,7 +10,7 @@ When('eu faço login com {string} e {string}', function (cpf, telefone) {
   Then('devo ver {string} no painel de área logada', function (painel) {
     let sidebar = client.page.sidebar()
 
-    return sidebar.expectLoggedUser('painel')
+    return sidebar.expectLoggedUser('Olá, este é o seu Painel!')
   });
 
   Then('devo ver a mensagem alerta {string} {string}', function (expectMessage, typeMessage){
@@ -26,6 +26,5 @@ When('eu faço login com {string} e {string}', function (cpf, telefone) {
     break;
 
     }
-
  
   });
