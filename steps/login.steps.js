@@ -12,6 +12,7 @@ When('eu faço login com {string} e {string}', function (cpf, telefone) {
 
     return sidebar.expectLoggedUser('Olá, este é o seu Painel!')
   });
+  
 
   Then('devo ver a mensagem alerta {string} {string}', function (expectMessage, typeMessage){
     let login = client.page.login()

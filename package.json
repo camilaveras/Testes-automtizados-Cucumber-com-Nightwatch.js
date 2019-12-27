@@ -9,6 +9,9 @@
   "author": "Camila",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "babel-preset-es2015": "^6.24.1",
     "chromedriver": "^79.0.0",
     "cucumber": "^6.0.3",
     "cucumber-html-reporter": "^5.0.2",

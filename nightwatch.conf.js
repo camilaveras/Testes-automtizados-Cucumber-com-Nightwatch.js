@@ -1,4 +1,5 @@
 const chromedriver = require('chromedriver');
+require('babel-core/register')
 
 //codigo do teste automatizado
 //configuração padrão do nightwatch

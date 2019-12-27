@@ -4,9 +4,9 @@ var loginActions = {
         .navigate()
         //aguardando que um elemento seja exibido
         .waitForElementVisible('@form', 100000)
-        .setValue('input[placeholder="Qual é o seu CPF ou CNPJ?"]', '06295485367')
+        .setValue('input[placeholder="Qual é o seu CPF ou CNPJ?"]', cpf)
         //se eu colocar assim> vai >         .setValue('input[placeholder="Digite seu celular"]', '11955301301')
-        .setValue('input[placeholder="Digite seu celular"]', '11955301301')
+        .setValue('input[placeholder="Digite seu celular"]', telefone)
         .click('@loginButton')
        
         //click_button 'Entrar'
@@ -32,5 +32,6 @@ module.exports = {
         loginButton: '.button',
         alertDanger: '.alert-danger',
         alertInfo: '.panelContainer'
+ 
     }
 }
