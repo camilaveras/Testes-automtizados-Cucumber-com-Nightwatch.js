@@ -5,22 +5,18 @@ var loginActions = {
         //aguardando que um elemento seja exibido
         .waitForElementVisible('@form', 100000)
         .setValue('input[placeholder="Qual é o seu CPF ou CNPJ?"]', cpf)
-        //se eu colocar assim> vai >         .setValue('input[placeholder="Digite seu celular"]', '11955301301')
         .setValue('input[placeholder="Digite seu celular"]', telefone)
         .click('@loginButton')
-       
         //click_button 'Entrar'
     },
+
+
     expectAlertDanger: function(texto){
         return this
-        .waitForElementVisible('@alertDanger', 10000)
-        .assert.containsText('@alertDanger', texto)
+        .waitForElementVisible('@alertContainer ', 10000)
+        .assert.containsText('@alertContainer ', texto)
+    
     },
-    expectAlertInfo: function (texto){
-        return this
-        .waitForElementVisible('@alertInfo', 10000)
-        .assert.containsText('@alertInfo', texto)
-    }
 }
 
 module.exports = {
@@ -28,10 +24,11 @@ module.exports = {
     commands: [loginActions],
     elements: {
         form: '.loginContainer',
-       //passInput:'input[name=password',
+        emailInput:'input[placeholder="Qual é o seu CPF ou CNPJ?"]',
+        tellinput:'input[placeholder="Digite seu celular"]',
         loginButton: '.button',
-        alertDanger: '.alert-danger',
-        alertInfo: '.panelContainer'
+        alertContainer : '.alertContainer'
+   
  
     }
 }

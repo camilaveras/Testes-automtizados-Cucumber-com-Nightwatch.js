@@ -4,13 +4,13 @@ const {When, Then} = require('cucumber')
 When('eu faço login com {string} e {string}', function (cpf, telefone) {
   let login = client.page.login()
 
-    return login.with('cpf', 'telefone')
+    return login.with(cpf, telefone)
   });
 
   Then('devo ver {string} no painel de área logada', function (painel) {
     let sidebar = client.page.sidebar()
 
-    return sidebar.expectLoggedUser('Olá, este é o seu Painel!')
+    return sidebar.expectLoggedUser(painel)
   });
   
 
